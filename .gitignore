@@ -1,0 +1,28 @@
+# Archivos sensibles - NO SUBIR A GITHUB
+backend-python/cookies.json
+backend-python/cookiesPRUEBAS.json
+frontend-next/bluemigrate-session.json
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+

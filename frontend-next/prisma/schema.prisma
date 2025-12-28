@@ -1,0 +1,49 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String            @id @default(cuid())
+  email           String            @unique
+  name            String?
+  password        String
+  migrations      Migration[]
+  isPremium       Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  FeaturedAccount FeaturedAccount[]
+}
+
+model Migration {
+  id         String   @id @default(cuid())
+  type       String
+  status     Status   @default(NOT_FETCHED)
+  bskyHandle String?
+  error_msg  String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  User       User?    @relation(fields: [userId], references: [id])
+  userId     String?
+}
+
+model FeaturedAccount {
+  id             String    @id @default(cuid())
+  User           User      @relation(fields: [userId], references: [id])
+  userId         String
+  handle         String
+  subscriptionId String
+  expiresAt      DateTime?
+  createdAt      DateTime  @default(now())
+}
+
+enum Status {
+  NOT_FETCHED
+  PENDING
+  SUCCESS
+  FAILED
+}

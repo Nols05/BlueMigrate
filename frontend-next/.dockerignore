@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+.next
+node_modules
+README.md
+.next
+!.next/static
+!.next/standalone
+.git
+.gitignore
+.vscode

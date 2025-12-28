@@ -1,0 +1,9 @@
+.env
+__pycache__
+venv
+
+# Archivos sensibles - NO SUBIR A GITHUB
+cookies.json
+cookiesPRUEBAS.json
+*.json.bak
+migration.log
