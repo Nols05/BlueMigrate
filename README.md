@@ -2,6 +2,8 @@
 
 A powerful migration tool that helps you seamlessly transfer your Twitter/X content to Bluesky while preserving original timestamps, media, and thread structures.
 
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/798b2e66-4416-4111-ac65-e157066e4e8f" />
+
 
 
 ## Overview
